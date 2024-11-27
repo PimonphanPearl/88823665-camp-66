@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ใช้เวลาใช้ภาษาอืนนอกจากภาษาอังกฤษ  -->
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop #HTML - FORM </title>
+</head>
+<!--หัวเรื่อง-->
+    <h1>Workshop #HTML - FORM </h1>
+<body>
+    <form>
+        <table>
+            <!--กรอกชื่อ นามสกุล ข้อมูลต่างๆ-->
+            <tr>
+                <td><label for="firstname">ชื่อ:</label></td>
+                <td><input type="text" id="firstname" name="firstname"></td>
+            </tr>
+            <tr>
+                <td><label for="lastname">สกุล:</label></td>
+                <td><input type="text" id="lastname" name="lastname"></td>
+            </tr>
+            <tr>
+                <td><label for="date">วัน/เดือน/ปีเกิด:</label></td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td><label for="age">อายุ:</label></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td><label for="sex">เพศ:</label></td>
+                <td>
+                    <label><input type="radio" id="male" name="Sex" value="ชาย"> ชาย</label>
+                    <label><input type="radio" id="female" name="Sex" value="หญิง"> หญิง</label>
+                </td>
+            </tr>
+            <!--อัพโหลดไฟล์-->
+        <tr>
+            <td><label for="fileUpload">รูป:</label> </td>
+            <td><input type="file" id="fileUpload" name="fileUpload"></td>
+        </tr>
+        <!--ใส่ที่อยู่-->
+        <tr>
+            <td><label for="address">ที่อยู่:</label></td>
+            <td><textarea rows="4" cols="40"></textarea></td>
+        </tr>
+        <!--select colors by Drop-Down box-->
+        <tr>
+            <td><label for="colors">สีที่ชอบ:</label></td>
+            <td>
+               <select id="colors" name="colors[]" >
+               <option value="red">สีแดง</option> 
+               <option value="blue">สีน้ำเงิน</option> 
+               <option value="green">สีเขียว</option> 
+               <option value="yellow">สีเหลือง</option> 
+               <option value="pink">สีชมพู</option> 
+               <option value="brown">สีน้ำตาล</option> 
+               <option value="white">สีขาว</option> 
+               <option value="black">สีดำ</option> 
+               <option value="purple">สีม่วง</option> 
+               <option value="orange">สีส้ม</option> 
+            </select>
+        </td>
+        </tr>
+        <tr>
+            <td><label for="song">แนวเพลงที่ชอบ:</label></td>
+            <td>
+                <label><input type="radio" id="song" name="song" value="เพื่อชีวิต">เพื่อชีวิต</label>
+                <label><input type="radio" id="song" name="song" value="ลูกทุ่ง">ลูกทุ่ง</label>
+                <label><input type="radio" id="song" name="song" value="อื่นๆ">อื่นๆ</label>
+            </td>
+        </tr>
+        <!--Checkbox-->
+        <tr>
+            <td><input type="checkbox" name="consent" value="agree">
+            ยินยอมให้เก็บข้อมูล</td>
+        </tr>
+        <!--Button-->    
+        <tr>
+         <td><br><br><input type="reset" value="Reset"></td>
+         <td><br><br><input type="submit" value="Submit"></td>
+        </tr>
+     
+        </table>
+    </form>
+</body>
+</html>
