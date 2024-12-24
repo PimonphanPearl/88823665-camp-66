@@ -20,6 +20,7 @@
                 </div>
                 <div class="col text-start h4">
                     <?php echo $my_var * $i; ?>
+            
                 </div>
             </div>
         <?php endfor; ?>
