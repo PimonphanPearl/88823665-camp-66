@@ -6,18 +6,36 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegisterController;
 
-Route::get('/login', [LoginController::class, 'index']);
+//ระบุ part url ตัว route
+Route::get('/home',
+    [HomeController::class, 'home']);
 
-Route::get('/register', [RegisterController::class, 'index']);
+Route::get('/',
+    [HomeController::class, 'home']);
+
+Route::get('/login',
+    [LoginController::class, 'index']);
+
+Route::get('/register' ,
+    [RegisterController::class, 'index']);
 
 Route::get('/home', [HomeController::class, 'index']);
-
 Route::get('/', [HomeController::class, 'index']);
 
-Route::post('/mycontroller/{id?}', [MyController::class, 'myFunction']);
-
-Route::get('/mycontroller/{id?}', [MyController::class, 'myFunction']);
-
-Route::get('/error500', function (){
-    abort(500, 'Internal Server Error');
+Route::get('/hello', function () {
+    return "<h1>Hello World!</h1>";
 });
+
+Route::get("/mycontroller/{id?}",
+    [MyController::class, 'myfunction']);
+
+Route::post("/mycontroller/{id?}",
+    [MyController::class, 'myfunction']);
+
+Route::get('/500', function () {
+        abort(500);
+    });
+
+Route::get('/404', function () {
+        abort(404);
+    });
