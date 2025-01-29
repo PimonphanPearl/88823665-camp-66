@@ -11,8 +11,6 @@ class MyController extends Controller
         $data['multiplicationTable'] = $this->generateMultiplicationTable($data['input']);
         return view('myview', $data);
     }
-
-    // ฟังก์ชันสำหรับสร้างสูตรคูณ
     private function generateMultiplicationTable($number) {
         $table = [];
         for ($i = 1; $i <= 12; $i++) {
