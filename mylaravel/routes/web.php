@@ -5,6 +5,7 @@ use App\Http\Controllers\MyController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UserController;
 
 //ระบุ part url ตัว route
 Route::get('/home',
@@ -18,6 +19,17 @@ Route::get('/login',
 
 Route::get('/register' ,
     [RegisterController::class, 'index']);
+
+Route::post('/register' ,
+    [RegisterController::class, 'create']);
+
+// Route User
+    Route::get('/users' ,[UserController::class, 'index'] );
+    Route::get('/user/{id}',[UserController::class, 'edit']);
+    Route::put('/user',[UserController::class, 'edit_action']); 
+    Route::delete('/user',[UserController::class, 'delete']); 
+
+
 
 Route::get('/home', [HomeController::class, 'index']);
 Route::get('/', [HomeController::class, 'index']);
