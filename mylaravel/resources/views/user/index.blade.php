@@ -49,9 +49,33 @@
             <li class="page-item"><a class="page-link" href="#">3</a></li>
             <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
           </ul>
+          <button class="btn" onclick="confirm_delete()">Click Me </button>
         </div>
       </div>
       <!-- /.card -->
     </div>
 </div>
+@endsection
+
+@section('scripts')
+<script>
+  confirm_delete = function(){
+Swal.fire({
+  title: "Are you sure?",
+  text: "You won't be able to revert this!",
+  icon: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#3085d6",
+  cancelButtonColor: "#d33",
+  confirmButtonText: "Yes, delete it!"
+}).then (function (result){
+  console.log("Result" , result)
+  if (result.isConfirmed) {
+   console.log("Delete It!",result)
+    
+    }
+  });
+}
+</script>
+
 @endsection

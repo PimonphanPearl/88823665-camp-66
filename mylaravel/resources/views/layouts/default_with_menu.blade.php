@@ -45,6 +45,8 @@
 
     <!-- <link rel="stylesheet" href="../../../dist/css/adminlte.css" /> -->
     <link rel="stylesheet" href="{{ url('public/css/adminlte.css') }}" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <!--end::Required Plugin(AdminLTE)-->
     @yield('styles')
   </head>
