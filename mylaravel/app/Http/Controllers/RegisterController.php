@@ -14,7 +14,7 @@ class RegisterController extends Controller
     }
     // step 2
     function create(Request $req){
-        print_r($req->input());
+      //  print_r($req->input());
         $muser = new User();
         $muser->name = $req->input('name');
         $muser->email = $req->email;
